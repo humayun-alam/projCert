@@ -1,6 +1,4 @@
-FROM ubuntu:18.04
-RUN apt update
-RUN apt install apache2 -y
+FROM devopsedu/webapp
 ADD website /var/www/html
 RUN rm /var/www/html/index.html
 CMD apachectl -D FOREGROUND
